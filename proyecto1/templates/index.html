@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Django</title>
+</head>
+<body>
+    <h1>Hola Mundo!</h1>
+    <h2>Te acuerdas {{nombre_usuario}} ?</h2>
+    <p><strong>Temas del curso:</strong></p>
+    <p>
+        <ul>
+        {% if temas %}
+            {% for tema in temas %}
+                <li>
+                    {{tema}}
+                </li>
+            {% endfor %}
+            {% else %}
+                <p>Lista Vac&iacute;a</p>
+        {% endif %}
+        </ul>
+    </p>
+    <p>Fecha: {{fecha.date}}</p>
+</body>
+</html>
